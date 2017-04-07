@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"grunt-githooks",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "grunt-githooks",
+    "description": "api documentation for [grunt-githooks (v0.6.0)](https://github.com/wecodemore/grunt-githooks) [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-githooks.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-githooks) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-githooks.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-githooks)",
     "devDependencies": {
-        "grunt-githooks": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "grunt-githooks": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-grunt-githooks",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-grunt-githooks",
+    "keywords": [
+        "documentation",
+        "grunt-githooks"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_grunt_githooks.js",
+    "name": "npmdoc-grunt-githooks",
+    "nameAlias": "npmdoc_grunt_githooks",
+    "nameOriginal": "npmdoc-grunt-githooks",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-grunt-githooks"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
