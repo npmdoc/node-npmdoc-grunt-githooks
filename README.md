@@ -1,9 +1,14 @@
-# api documentation for  [grunt-githooks (v0.6.0)](https://github.com/wecodemore/grunt-githooks)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-githooks.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-githooks) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-githooks.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-githooks)
+# npmdoc-grunt-githooks
+
+#### api documentation for  [grunt-githooks (v0.6.0)](https://github.com/wecodemore/grunt-githooks)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-githooks.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-githooks) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-githooks.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-githooks)
+
 #### A Grunt plugin to help bind Grunt tasks to Git hooks
 
-[![NPM](https://nodei.co/npm/grunt-githooks.png?downloads=true)](https://www.npmjs.com/package/grunt-githooks)
+[![NPM](https://nodei.co/npm/grunt-githooks.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-githooks)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-githooks/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-githooks_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-githooks/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-grunt-githooks/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-grunt-githooks/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-githooks/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-githooks/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-githooks/build/screenCapture.npmPackageListing.svg)
 
@@ -26,7 +31,6 @@
     "contributors": [
         {
             "name": "Franz Josef Kaiser",
-            "email": "wecodemore@gmail.com",
             "url": "http://unserkaiser.com"
         },
         {
@@ -68,12 +72,10 @@
     "main": "Gruntfile.js",
     "maintainers": [
         {
-            "name": "rhumaric",
-            "email": "romaric.pascal@gmail.com"
+            "name": "rhumaric"
         },
         {
-            "name": "wecodemore",
-            "email": "wecodemore@gmail.com"
+            "name": "wecodemore"
         }
     ],
     "name": "grunt-githooks",
@@ -81,7 +83,6 @@
     "peerDependencies": {
         "grunt": ">=0.4.1"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/wecodemore/grunt-githooks.git"
@@ -91,60 +92,6 @@
     },
     "version": "0.6.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module grunt-githooks](#apidoc.module.grunt-githooks)
-1.  object <span class="apidocSignatureSpan">grunt-githooks.</span>githooks
-
-#### [module grunt-githooks.githooks](#apidoc.module.grunt-githooks.githooks)
-1.  [function <span class="apidocSignatureSpan">grunt-githooks.githooks.</span>Hook (hookName, taskNames, options)](#apidoc.element.grunt-githooks.githooks.Hook)
-
-
-
-# <a name="apidoc.module.grunt-githooks"></a>[module grunt-githooks](#apidoc.module.grunt-githooks)
-
-
-
-# <a name="apidoc.module.grunt-githooks.githooks"></a>[module grunt-githooks.githooks](#apidoc.module.grunt-githooks.githooks)
-
-#### <a name="apidoc.element.grunt-githooks.githooks.Hook"></a>[function <span class="apidocSignatureSpan">grunt-githooks.githooks.</span>Hook (hookName, taskNames, options)](#apidoc.element.grunt-githooks.githooks.Hook)
-- description and source-code
-```javascript
-function Hook(hookName, taskNames, options) {
-
-<span class="apidocCodeCommentSpan">  /**
-   * The name of the hook
-   * @property hookName
-   * @type {String}
-   */
-</span>  this.hookName = hookName;
-
-  /**
-   * The name of the tasks that should be run by the hook, space separated
-   * @property taskNames
-   * @type {String}
-   */
-  this.taskNames = taskNames;
-
-  /**
-   * Options for the creation of the hook
-   * @property options
-   * @type {Object}
-   */
-  this.options = options || {};
-
-  this.markerRegExp = new RegExp(this.options.startMarker.replace(/\//g, '\\/') +
-                      '[\\s\\S]*' + // Not .* because it needs to match \n
-                      this.options.endMarker.replace(/\//g, '\\/'), 'm');
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
