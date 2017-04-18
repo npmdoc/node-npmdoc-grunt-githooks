@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-githooks.grunt-githooks">
+            function <span class="apidocSignatureSpan"></span>grunt-githooks
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-githooks.</span>githooks</span>
 
         </li>
@@ -86,6 +95,201 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.grunt-githooks" id="apidoc.module.grunt-githooks">module grunt-githooks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-githooks.grunt-githooks" id="apidoc.element.grunt-githooks.grunt-githooks">
+        function <span class="apidocSignatureSpan"></span>grunt-githooks
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-githooks = function (grunt) {
+
+  // Project configuration.
+  grunt.initConfig({
+    jshint: {
+      all: [
+        &#x27;Gruntfile.js&#x27;,
+        &#x27;tasks/*.js&#x27;,
+        &#x27;lib/*.js&#x27;,
+        &#x27;&#x3c;%= nodeunit.tests %&#x3e;&#x27;,
+      ],
+      options: {
+        jshintrc: &#x27;.jshintrc&#x27;,
+      },
+    },
+
+    // Before generating any new files, remove any previously-created files.
+    clean: {
+      tests: [&#x27;tmp&#x27;],
+    },
+
+    copy: {
+      tests: {
+        files: [
+          {cwd: &#x27;test/fixtures&#x27;, src: &#x27;**&#x27;, dest: &#x27;tmp&#x27;, expand: true}
+        ]
+      }
+    },
+
+    // Configuration to be run (and then tested).
+    githooks: {
+
+      // Actual target used to bind hooks for project development
+      &#x27;dev&#x27;: {
+        &#x27;pre-commit&#x27;: &#x27;jshint&#x27;
+      },
+
+      // Test targets
+      // Default hook creation
+      &#x27;test.default&#x27;: {
+        options: {
+          dest: &#x27;tmp/default&#x27;,
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      // Binding multiple tasks
+      &#x27;test.multiple_tasks&#x27;: {
+        options: {
+          dest: &#x27;tmp/multiple_tasks&#x27;,
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask anotherTask&#x27;
+      },
+
+      &#x27;test.multipleHooks&#x27;: {
+
+        options: {
+          dest: &#x27;tmp/multipleHooks&#x27;
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;,
+        &#x27;commit-msg&#x27;: &#x27;anotherTask&#x27;
+      },
+
+      // Appending binding to and existing hook
+      &#x27;test.append&#x27;: {
+        options: {
+          dest: &#x27;tmp/append&#x27;
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      &#x27;test.customTemplate&#x27;: {
+        options: {
+          dest: &#x27;tmp/customTemplate&#x27;,
+          template: &#x27;test/fixtures/custom-template.js.hb&#x27;
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      &#x27;test.insert&#x27;: {
+        options: {
+          dest: &#x27;tmp/insert&#x27;,
+          preventExit: true
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      &#x27;test.customHashbang&#x27;: {
+        options: {
+          dest: &#x27;tmp/customHashbang&#x27;,
+          hashbang: &#x27;#!/usr/bin/node&#x27;
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      &#x27;test.withArguments&#x27;: {
+        options: {
+          dest: &#x27;tmp/withArguments&#x27;,
+					args: &#x22;--test myargument&#x22;
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      &#x27;test.withQuotedArguments&#x27;: {
+        options: {
+          dest: &#x27;tmp/withQuotedArguments&#x27;,
+          args: &#x27;--test &#x22;foo \&#x27;bar baz\&#x27;&#x22;&#x27;
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      &#x27;test.hookSpecificOptions&#x27;: {
+
+        options: {
+          dest: &#x27;tmp/hookSpecificOptions&#x27;,
+          hashbang: &#x27;#!/usr/bin/node&#x27;
+        },
+        &#x27;pre-commit&#x27;: {
+          taskNames: &#x27;aTask&#x27;,
+          template: &#x27;test/fixtures/custom-template.js.hb&#x27;
+        }
+      },
+
+      &#x27;test.shellScript&#x27;: {
+
+        options: {
+          dest: &#x27;tmp/shellScript&#x27;,
+          hashbang: &#x27;#!/bin/sh&#x27;,
+          template: &#x27;templates/shell.hb&#x27;,
+          startMarker: &#x27;## GRUNT-GITHOOKS START&#x27;,
+          endMarker: &#x27;## GRUNT-GITHOOKS END&#x27;
+        },
+        &#x27;pre-commit&#x27;:&#x27;jshint&#x27;
+      },
+
+      &#x27;test.command&#x27;: {
+        options: {
+          dest: &#x27;tmp/command&#x27;
+        },
+        &#x27;pre-commit&#x27;: {
+          command: &#x27;/usr/bin/grunt&#x27;,
+          taskNames: &#x27;aTask&#x27;
+        }
+      },
+
+      &#x27;test.noTaskNames&#x27;: {
+        options: {
+          dest: &#x27;tmp/noTaskNames&#x27;
+        },
+        &#x27;pre-commit&#x27;: {
+          preventExit: true
+        }
+      },
+
+      // Test targets for logging validation
+      // Logs which tasks get bound to which hook
+      &#x27;logs.defaultLogging&#x27;: {
+        options: {
+          dest: &#x27;tmp/defaultLogging&#x27;,
+        },
+        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+      },
+
+      // Logs if the hook name does not correspond to a Git hook
+      &#x27;logs.warnIfNotValidHook&#x27;: {
+        options: {
+          dest: &#x27;tmp/warnIfNotValidHook&#x27;,
+        },
+        &#x27;definitelyNotTheNameOfAGitHook&#x27;: &#x27;jshint&#x27;
+      },
+
+      // Fail if the existing hook does not have the appropriate scripting
+      // language
+      &#x27;fails.invalidScriptingLanguage&#x27;: {
+        options: {
+          dest: &#x27;tmp/invalidScriptingLanguage&#x27;,
+        },
+        &#x27;pre-commit&#x27;: &#x27;jshint&#x27;
+      },
+
+      &#x27;fails.customHashbangInvalidScriptingLanguage&#x27;: {
+        options: {
+          dest: &#x27;tmp/customHashbangInvalidScript ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
 

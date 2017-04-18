@@ -1,14 +1,17 @@
-<svg height="174" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="174" fill="#555" width="720"></rect>
+<svg height="222" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="222" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">├── UNMET PEER DEPENDENCY grunt@&gt;=0.4.1</tspan>
-<tspan x="10" y="42">└─┬ grunt-githooks@0.6.0 </tspan>
-<tspan x="10" y="58">  └─┬ handlebars@1.0.12 </tspan>
-<tspan x="10" y="74">    ├─┬ optimist@0.3.7 </tspan>
-<tspan x="10" y="90">    │ └── wordwrap@0.0.3 </tspan>
-<tspan x="10" y="106">    └─┬ uglify-js@2.3.6 </tspan>
-<tspan x="10" y="122">      ├── async@0.2.10 </tspan>
-<tspan x="10" y="138">      └─┬ source-map@0.1.43 </tspan>
-<tspan x="10" y="154">        └── amdefine@1.0.1</tspan>
+<tspan x="10" y="26">2 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">├── UNMET PEER DEPENDENCY grunt@&gt;=0.4.1</tspan>
+<tspan x="10" y="90">└─┬ grunt-githooks@0.6.0 </tspan>
+<tspan x="10" y="106">  └─┬ handlebars@1.0.12 </tspan>
+<tspan x="10" y="122">    ├─┬ optimist@0.3.7 </tspan>
+<tspan x="10" y="138">    │ └── wordwrap@0.0.3 </tspan>
+<tspan x="10" y="154">    └─┬ uglify-js@2.3.6 </tspan>
+<tspan x="10" y="170">      ├── async@0.2.10 </tspan>
+<tspan x="10" y="186">      └─┬ source-map@0.1.43 </tspan>
+<tspan x="10" y="202">        └── amdefine@1.0.1</tspan>
 </text>
 </svg>

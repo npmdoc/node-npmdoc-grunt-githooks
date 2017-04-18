@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/wecodemore/grunt-githooks"
-
-    >grunt-githooks (v0.6.0)</a>
+    <a href="https://github.com/wecodemore/grunt-githooks">grunt-githooks (v0.6.0)</a>
 </h1>
 <h4>A Grunt plugin to help bind Grunt tasks to Git hooks</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-githooks">module grunt-githooks</a><ol>
 
@@ -110,25 +103,25 @@
   grunt.initConfig({
     jshint: {
       all: [
-        &#x27;Gruntfile.js&#x27;,
-        &#x27;tasks/*.js&#x27;,
-        &#x27;lib/*.js&#x27;,
-        &#x27;&#x3c;%= nodeunit.tests %&#x3e;&#x27;,
+        'Gruntfile.js',
+        'tasks/*.js',
+        'lib/*.js',
+        '&lt;%= nodeunit.tests %&gt;',
       ],
       options: {
-        jshintrc: &#x27;.jshintrc&#x27;,
+        jshintrc: '.jshintrc',
       },
     },
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: [&#x27;tmp&#x27;],
+      tests: ['tmp'],
     },
 
     copy: {
       tests: {
         files: [
-          {cwd: &#x27;test/fixtures&#x27;, src: &#x27;**&#x27;, dest: &#x27;tmp&#x27;, expand: true}
+          {cwd: 'test/fixtures', src: '**', dest: 'tmp', expand: true}
         ]
       }
     },
@@ -137,156 +130,156 @@
     githooks: {
 
       // Actual target used to bind hooks for project development
-      &#x27;dev&#x27;: {
-        &#x27;pre-commit&#x27;: &#x27;jshint&#x27;
+      'dev': {
+        'pre-commit': 'jshint'
       },
 
       // Test targets
       // Default hook creation
-      &#x27;test.default&#x27;: {
+      'test.default': {
         options: {
-          dest: &#x27;tmp/default&#x27;,
+          dest: 'tmp/default',
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
       // Binding multiple tasks
-      &#x27;test.multiple_tasks&#x27;: {
+      'test.multiple_tasks': {
         options: {
-          dest: &#x27;tmp/multiple_tasks&#x27;,
+          dest: 'tmp/multiple_tasks',
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask anotherTask&#x27;
+        'pre-commit': 'aTask anotherTask'
       },
 
-      &#x27;test.multipleHooks&#x27;: {
+      'test.multipleHooks': {
 
         options: {
-          dest: &#x27;tmp/multipleHooks&#x27;
+          dest: 'tmp/multipleHooks'
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;,
-        &#x27;commit-msg&#x27;: &#x27;anotherTask&#x27;
+        'pre-commit': 'aTask',
+        'commit-msg': 'anotherTask'
       },
 
       // Appending binding to and existing hook
-      &#x27;test.append&#x27;: {
+      'test.append': {
         options: {
-          dest: &#x27;tmp/append&#x27;
+          dest: 'tmp/append'
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
-      &#x27;test.customTemplate&#x27;: {
+      'test.customTemplate': {
         options: {
-          dest: &#x27;tmp/customTemplate&#x27;,
-          template: &#x27;test/fixtures/custom-template.js.hb&#x27;
+          dest: 'tmp/customTemplate',
+          template: 'test/fixtures/custom-template.js.hb'
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
-      &#x27;test.insert&#x27;: {
+      'test.insert': {
         options: {
-          dest: &#x27;tmp/insert&#x27;,
+          dest: 'tmp/insert',
           preventExit: true
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
-      &#x27;test.customHashbang&#x27;: {
+      'test.customHashbang': {
         options: {
-          dest: &#x27;tmp/customHashbang&#x27;,
-          hashbang: &#x27;#!/usr/bin/node&#x27;
+          dest: 'tmp/customHashbang',
+          hashbang: '#!/usr/bin/node'
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
-      &#x27;test.withArguments&#x27;: {
+      'test.withArguments': {
         options: {
-          dest: &#x27;tmp/withArguments&#x27;,
-					args: &#x22;--test myargument&#x22;
+          dest: 'tmp/withArguments',
+					args: "--test myargument"
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
-      &#x27;test.withQuotedArguments&#x27;: {
+      'test.withQuotedArguments': {
         options: {
-          dest: &#x27;tmp/withQuotedArguments&#x27;,
-          args: &#x27;--test &#x22;foo \&#x27;bar baz\&#x27;&#x22;&#x27;
+          dest: 'tmp/withQuotedArguments',
+          args: '--test "foo \'bar baz\'"'
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
-      &#x27;test.hookSpecificOptions&#x27;: {
+      'test.hookSpecificOptions': {
 
         options: {
-          dest: &#x27;tmp/hookSpecificOptions&#x27;,
-          hashbang: &#x27;#!/usr/bin/node&#x27;
+          dest: 'tmp/hookSpecificOptions',
+          hashbang: '#!/usr/bin/node'
         },
-        &#x27;pre-commit&#x27;: {
-          taskNames: &#x27;aTask&#x27;,
-          template: &#x27;test/fixtures/custom-template.js.hb&#x27;
+        'pre-commit': {
+          taskNames: 'aTask',
+          template: 'test/fixtures/custom-template.js.hb'
         }
       },
 
-      &#x27;test.shellScript&#x27;: {
+      'test.shellScript': {
 
         options: {
-          dest: &#x27;tmp/shellScript&#x27;,
-          hashbang: &#x27;#!/bin/sh&#x27;,
-          template: &#x27;templates/shell.hb&#x27;,
-          startMarker: &#x27;## GRUNT-GITHOOKS START&#x27;,
-          endMarker: &#x27;## GRUNT-GITHOOKS END&#x27;
+          dest: 'tmp/shellScript',
+          hashbang: '#!/bin/sh',
+          template: 'templates/shell.hb',
+          startMarker: '## GRUNT-GITHOOKS START',
+          endMarker: '## GRUNT-GITHOOKS END'
         },
-        &#x27;pre-commit&#x27;:&#x27;jshint&#x27;
+        'pre-commit':'jshint'
       },
 
-      &#x27;test.command&#x27;: {
+      'test.command': {
         options: {
-          dest: &#x27;tmp/command&#x27;
+          dest: 'tmp/command'
         },
-        &#x27;pre-commit&#x27;: {
-          command: &#x27;/usr/bin/grunt&#x27;,
-          taskNames: &#x27;aTask&#x27;
+        'pre-commit': {
+          command: '/usr/bin/grunt',
+          taskNames: 'aTask'
         }
       },
 
-      &#x27;test.noTaskNames&#x27;: {
+      'test.noTaskNames': {
         options: {
-          dest: &#x27;tmp/noTaskNames&#x27;
+          dest: 'tmp/noTaskNames'
         },
-        &#x27;pre-commit&#x27;: {
+        'pre-commit': {
           preventExit: true
         }
       },
 
       // Test targets for logging validation
       // Logs which tasks get bound to which hook
-      &#x27;logs.defaultLogging&#x27;: {
+      'logs.defaultLogging': {
         options: {
-          dest: &#x27;tmp/defaultLogging&#x27;,
+          dest: 'tmp/defaultLogging',
         },
-        &#x27;pre-commit&#x27;: &#x27;aTask&#x27;
+        'pre-commit': 'aTask'
       },
 
       // Logs if the hook name does not correspond to a Git hook
-      &#x27;logs.warnIfNotValidHook&#x27;: {
+      'logs.warnIfNotValidHook': {
         options: {
-          dest: &#x27;tmp/warnIfNotValidHook&#x27;,
+          dest: 'tmp/warnIfNotValidHook',
         },
-        &#x27;definitelyNotTheNameOfAGitHook&#x27;: &#x27;jshint&#x27;
+        'definitelyNotTheNameOfAGitHook': 'jshint'
       },
 
       // Fail if the existing hook does not have the appropriate scripting
       // language
-      &#x27;fails.invalidScriptingLanguage&#x27;: {
+      'fails.invalidScriptingLanguage': {
         options: {
-          dest: &#x27;tmp/invalidScriptingLanguage&#x27;,
+          dest: 'tmp/invalidScriptingLanguage',
         },
-        &#x27;pre-commit&#x27;: &#x27;jshint&#x27;
+        'pre-commit': 'jshint'
       },
 
-      &#x27;fails.customHashbangInvalidScriptingLanguage&#x27;: {
+      'fails.customHashbangInvalidScriptingLanguage': {
         options: {
-          dest: &#x27;tmp/customHashbangInvalidScript ...</pre></li>
+          dest: 'tmp/customHashbangInvalidScript ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -329,9 +322,9 @@
    */
   this.options = options || {};
 
-  this.markerRegExp = new RegExp(this.options.startMarker.replace(/\//g, &#x27;\\/&#x27;) +
-                      &#x27;[\\s\\S]*&#x27; + // Not .* because it needs to match \n
-                      this.options.endMarker.replace(/\//g, &#x27;\\/&#x27;), &#x27;m&#x27;);
+  this.markerRegExp = new RegExp(this.options.startMarker.replace(/\//g, '\\/') +
+                      '[\\s\\S]*' + // Not .* because it needs to match \n
+                      this.options.endMarker.replace(/\//g, '\\/'), 'm');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -345,3 +338,4 @@
     ]
 </div>
 </div>
+</body></html>
