@@ -1,43 +1,43 @@
 <svg height="638" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="638" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-18 16:20:11 +0000    39613 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-18 16:20:11 +0000       97 bytes  AUTHORS</tspan>
-<tspan x="10" y="58">  2.  2017-04-18 16:20:11 +0000     1015 bytes  CHANGELOG.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-18 16:20:11 +0000     5477 bytes  Gruntfile.js</tspan>
-<tspan x="10" y="90">  4.  2017-04-18 16:20:11 +0000     1107 bytes  LICENSE-MIT</tspan>
-<tspan x="10" y="106">  5.  2017-04-18 16:20:11 +0000     9128 bytes  README.md</tspan>
-<tspan x="10" y="122">  6.  2017-04-18 16:20:11 +0000      127 bytes  lib/escapeBackslashes.handlebars.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-18 16:20:11 +0000     5396 bytes  lib/githooks.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-18 16:20:11 +0000     3088 bytes  package.json</tspan>
-<tspan x="10" y="170">  9.  2017-04-18 16:20:11 +0000     2891 bytes  tasks/githooks.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-18 16:20:11 +0000      498 bytes  templates/node.js.hb</tspan>
-<tspan x="10" y="202"> 11.  2017-04-18 16:20:11 +0000      101 bytes  templates/shell.hb</tspan>
-<tspan x="10" y="218"> 12.  2017-04-18 16:20:11 +0000      407 bytes  test/expected/commit-msg.multipleHooks</tspan>
-<tspan x="10" y="234"> 13.  2017-04-18 16:20:11 +0000      460 bytes  test/expected/pre-commit.append</tspan>
-<tspan x="10" y="250"> 14.  2017-04-18 16:20:11 +0000      410 bytes  test/expected/pre-commit.command</tspan>
-<tspan x="10" y="266"> 15.  2017-04-18 16:20:11 +0000      397 bytes  test/expected/pre-commit.customHashbang</tspan>
-<tspan x="10" y="282"> 16.  2017-04-18 16:20:11 +0000      103 bytes  test/expected/pre-commit.customHashbangInvalidSc\</tspan>
+<tspan x="10" y="26">  0.  2017-04-18 16:21:10 +0000    39613 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-18 16:21:10 +0000       97 bytes  AUTHORS</tspan>
+<tspan x="10" y="58">  2.  2017-04-18 16:21:10 +0000     1015 bytes  CHANGELOG.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-18 16:21:10 +0000     5477 bytes  Gruntfile.js</tspan>
+<tspan x="10" y="90">  4.  2017-04-18 16:21:10 +0000     1107 bytes  LICENSE-MIT</tspan>
+<tspan x="10" y="106">  5.  2017-04-18 16:21:10 +0000     9128 bytes  README.md</tspan>
+<tspan x="10" y="122">  6.  2017-04-18 16:21:10 +0000      127 bytes  lib/escapeBackslashes.handlebars.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-18 16:21:10 +0000     5396 bytes  lib/githooks.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-18 16:21:10 +0000     3088 bytes  package.json</tspan>
+<tspan x="10" y="170">  9.  2017-04-18 16:21:10 +0000     2891 bytes  tasks/githooks.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-18 16:21:10 +0000      498 bytes  templates/node.js.hb</tspan>
+<tspan x="10" y="202"> 11.  2017-04-18 16:21:10 +0000      101 bytes  templates/shell.hb</tspan>
+<tspan x="10" y="218"> 12.  2017-04-18 16:21:10 +0000      407 bytes  test/expected/commit-msg.multipleHooks</tspan>
+<tspan x="10" y="234"> 13.  2017-04-18 16:21:10 +0000      460 bytes  test/expected/pre-commit.append</tspan>
+<tspan x="10" y="250"> 14.  2017-04-18 16:21:10 +0000      410 bytes  test/expected/pre-commit.command</tspan>
+<tspan x="10" y="266"> 15.  2017-04-18 16:21:10 +0000      397 bytes  test/expected/pre-commit.customHashbang</tspan>
+<tspan x="10" y="282"> 16.  2017-04-18 16:21:10 +0000      103 bytes  test/expected/pre-commit.customHashbangInvalidSc\</tspan>
 <tspan x="10" y="298">riptingLanguage</tspan>
-<tspan x="10" y="314"> 17.  2017-04-18 16:20:11 +0000      391 bytes  test/expected/pre-commit.customTemplate</tspan>
-<tspan x="10" y="330"> 18.  2017-04-18 16:20:11 +0000      401 bytes  test/expected/pre-commit.default</tspan>
-<tspan x="10" y="346"> 19.  2017-04-18 16:20:11 +0000      387 bytes  test/expected/pre-commit.hookSpecificOptions</tspan>
-<tspan x="10" y="362"> 20.  2017-04-18 16:20:11 +0000      563 bytes  test/expected/pre-commit.insert</tspan>
-<tspan x="10" y="378"> 21.  2017-04-18 16:20:11 +0000       51 bytes  test/expected/pre-commit.invalidScriptingLanguag\</tspan>
+<tspan x="10" y="314"> 17.  2017-04-18 16:21:10 +0000      391 bytes  test/expected/pre-commit.customTemplate</tspan>
+<tspan x="10" y="330"> 18.  2017-04-18 16:21:10 +0000      401 bytes  test/expected/pre-commit.default</tspan>
+<tspan x="10" y="346"> 19.  2017-04-18 16:21:10 +0000      387 bytes  test/expected/pre-commit.hookSpecificOptions</tspan>
+<tspan x="10" y="362"> 20.  2017-04-18 16:21:10 +0000      563 bytes  test/expected/pre-commit.insert</tspan>
+<tspan x="10" y="378"> 21.  2017-04-18 16:21:10 +0000       51 bytes  test/expected/pre-commit.invalidScriptingLanguag\</tspan>
 <tspan x="10" y="394">e</tspan>
-<tspan x="10" y="410"> 22.  2017-04-18 16:20:11 +0000      401 bytes  test/expected/pre-commit.multipleHooks</tspan>
-<tspan x="10" y="426"> 23.  2017-04-18 16:20:11 +0000      413 bytes  test/expected/pre-commit.multiple_tasks</tspan>
-<tspan x="10" y="442"> 24.  2017-04-18 16:20:11 +0000      368 bytes  test/expected/pre-commit.noTaskNames</tspan>
-<tspan x="10" y="458"> 25.  2017-04-18 16:20:11 +0000      102 bytes  test/expected/pre-commit.shellScript</tspan>
-<tspan x="10" y="474"> 26.  2017-04-18 16:20:11 +0000      419 bytes  test/expected/pre-commit.withArguments</tspan>
-<tspan x="10" y="490"> 27.  2017-04-18 16:20:11 +0000      427 bytes  test/expected/pre-commit.withQuotedArguments</tspan>
-<tspan x="10" y="506"> 28.  2017-04-18 16:20:11 +0000       78 bytes  test/fixtures/append/pre-commit</tspan>
-<tspan x="10" y="522"> 29.  2017-04-18 16:20:11 +0000      327 bytes  test/fixtures/custom-template.js.hb</tspan>
-<tspan x="10" y="538"> 30.  2017-04-18 16:20:11 +0000      103 bytes  test/fixtures/customHashbangInvalidScriptingLang\</tspan>
+<tspan x="10" y="410"> 22.  2017-04-18 16:21:10 +0000      401 bytes  test/expected/pre-commit.multipleHooks</tspan>
+<tspan x="10" y="426"> 23.  2017-04-18 16:21:10 +0000      413 bytes  test/expected/pre-commit.multiple_tasks</tspan>
+<tspan x="10" y="442"> 24.  2017-04-18 16:21:10 +0000      368 bytes  test/expected/pre-commit.noTaskNames</tspan>
+<tspan x="10" y="458"> 25.  2017-04-18 16:21:10 +0000      102 bytes  test/expected/pre-commit.shellScript</tspan>
+<tspan x="10" y="474"> 26.  2017-04-18 16:21:10 +0000      419 bytes  test/expected/pre-commit.withArguments</tspan>
+<tspan x="10" y="490"> 27.  2017-04-18 16:21:10 +0000      427 bytes  test/expected/pre-commit.withQuotedArguments</tspan>
+<tspan x="10" y="506"> 28.  2017-04-18 16:21:10 +0000       78 bytes  test/fixtures/append/pre-commit</tspan>
+<tspan x="10" y="522"> 29.  2017-04-18 16:21:10 +0000      327 bytes  test/fixtures/custom-template.js.hb</tspan>
+<tspan x="10" y="538"> 30.  2017-04-18 16:21:10 +0000      103 bytes  test/fixtures/customHashbangInvalidScriptingLang\</tspan>
 <tspan x="10" y="554">uage/pre-commit</tspan>
-<tspan x="10" y="570"> 31.  2017-04-18 16:20:11 +0000      255 bytes  test/fixtures/insert/pre-commit</tspan>
-<tspan x="10" y="586"> 32.  2017-04-18 16:20:11 +0000       51 bytes  test/fixtures/invalidScriptingLanguage/pre-commi\</tspan>
+<tspan x="10" y="570"> 31.  2017-04-18 16:21:10 +0000      255 bytes  test/fixtures/insert/pre-commit</tspan>
+<tspan x="10" y="586"> 32.  2017-04-18 16:21:10 +0000       51 bytes  test/fixtures/invalidScriptingLanguage/pre-commi\</tspan>
 <tspan x="10" y="602">t</tspan>
-<tspan x="10" y="618"> 33.  2017-04-18 16:20:11 +0000     4174 bytes  test/githooks_test.js</tspan>
+<tspan x="10" y="618"> 33.  2017-04-18 16:21:10 +0000     4174 bytes  test/githooks_test.js</tspan>
 </text>
 </svg>
