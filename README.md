@@ -1,6 +1,6 @@
 # npmdoc-grunt-githooks
 
-#### api documentation for  [grunt-githooks (v0.6.0)](https://github.com/wecodemore/grunt-githooks)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-githooks.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-githooks) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-githooks.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-githooks)
+#### basic api documentation for  [grunt-githooks (v0.6.0)](https://github.com/wecodemore/grunt-githooks)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-githooks.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-githooks) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-githooks.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-githooks)
 
 #### A Grunt plugin to help bind Grunt tasks to Git hooks
 
@@ -90,7 +90,8 @@
     "scripts": {
         "test": "grunt test"
     },
-    "version": "0.6.0"
+    "version": "0.6.0",
+    "bin": {}
 }
 ```
 
