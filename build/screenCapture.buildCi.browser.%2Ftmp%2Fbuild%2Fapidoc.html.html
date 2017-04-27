@@ -326,7 +326,22 @@
                       '[\\s\\S]*' + // Not .* because it needs to match \n
                       this.options.endMarker.replace(/\//g, '\\/'), 'm');
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  grunt.log.subhead('Binding `' + taskNames + '` to `' + hookName + '` Git hook.');
+  task.validateHookName(hookName, grunt);
+
+  try {
+
+    var hook = new task.internals.<span class="apidocCodeKeywordSpan">Hook</span>(hookName, taskNames, options);
+    hook.create();
+    grunt.log.ok();
+  } catch (error) {
+    task.logError(error, hookName, grunt);
+  }
+};
+...</pre></li>
     </ul>
 
 
